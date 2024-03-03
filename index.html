@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="title">
+      <p>My Video Player 🥰</p>
+    </div>
+
+    <!-- Video container -->
+    <div class="video-container">
+      <img src="./images/thumbnail.jpg" id="video-thumbnail" />
+      <video id="video">
+        <!-- Video source -->
+        <source
+          src="./video/Jenifa's diary Season 16 Episode 10 - Available On SceneOneTV App_www.sceneone.tv on the 4th of Aug.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- Controlers continer -->
+      <div class="controls">
+        <!-- Left controller div -->
+        <div class="left">
+          <button id="skipminus-10">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+          <button id="play-pause">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button id="skip-10">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
+
+        <!-- div for progress bar -->
+        <div class="video-timer">
+          <span id="current-time">00:00</span>
+          <span id="separator">/</span>
+          <span id="max-duration">00:00</span>
+        </div>
+        <div class="playback-line">
+          <div class="progress-bar"></div>
+        </div>
+
+        <!-- Right controller div -->
+        <div class="right">
+          <div class="volume-container">
+            <div id="mute">
+              <i class="fas fa-volume-up"></i>
+            </div>
+            <input
+              type="range"
+              id="volume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
